@@ -11,7 +11,7 @@ git fetch -p >nul 2>&1
 echo Done.
 echo.
 
-for /f "tokens=1" %%b in ('git branch -vv ^| findstr /c:"[gone]"') do (
+for /f "tokens=1" %%b in ('git branch -vv ^| findstr /c:"gone]"') do (
     echo Deleting branch: %%b
     git branch -d %%b >nul 2>&1
 )
